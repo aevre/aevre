@@ -1,5 +1,5 @@
 <div align=center>
- <img src="https://raw.githubusercontent.com/immortal521/Immortal521/main/assets/github-contribution-grid-snake.svg" />
+ <img src="https://raw.githubusercontent.com/aevre/aevre/main/assets/github-contribution-grid-snake.svg" />
 </div>
 
 <div align=center>
