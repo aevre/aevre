@@ -1,10 +1,17 @@
-<div align=center>
- <img src="https://raw.githubusercontent.com/aevre/aevre/main/assets/github-contribution-grid-snake.svg" />
+<div align="center">
+
+# Hi, I'm aevre.
+
+<sub>Keep building. Keep learning.</sub>
+
+<br />
+<br />
+
+<img src="./profile/stats.svg" alt="GitHub statistics" />
+
 </div>
 
-<div align=center>
- <img src="./profile/stats.svg" />
-</div>
+## Weekly Development
 
 <!-- waka-box start -->
 #### <a href="https://gist.github.com/ddee6660ea4819d749c4393b4cc8e382" target="_blank">📊 Weekly development breakdown</a>
@@ -18,6 +25,17 @@ Markdown                 🕓 3h6m   ▉░░░░░░░░░░░░  6.
 <!-- Powered by https://github.com/YouEclipse/waka-box-go . -->
 <!-- waka-box end -->
 
-<div align=center>
- <kbd><img src="./profile/top-langs.svg"> <img src="./assets/1.gif" height="165" ></kbd>
-</div>
+## Languages
+
+<p align="center">
+  <img src="./profile/top-langs.svg" height="165" alt="Most used languages" />
+  <img src="./assets/1.gif" height="165" alt="Animated coding illustration" />
+</p>
+
+## Contribution Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-grid-snake.svg" />
+  <img src="./assets/github-contribution-grid-snake.svg" alt="GitHub contribution grid animation" width="100%" />
+</picture>
