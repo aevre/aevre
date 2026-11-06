@@ -6,6 +6,12 @@
 
 </div>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-grid-snake.svg" />
+  <img src="./assets/github-contribution-grid-snake.svg" alt="GitHub contribution grid animation" width="100%" />
+</picture>
+
 ## Technology
 
 | Area     | Technologies                                          |
@@ -19,8 +25,8 @@
 <p align="center">
   <img src="./profile/stats.svg" alt="GitHub statistics" />
   <br />
-  <img src="./profile/top-langs.svg" height="165" alt="Most used languages" />
-  <img src="./assets/1.gif" height="165" alt="Animated coding illustration" />
+  <img src="./profile/top-langs.svg" width="49%" alt="Most used languages" />
+  <img src="./assets/1.gif" width="49%" alt="Animated coding illustration" />
 </p>
 
 <!-- waka-box start -->
@@ -35,9 +41,3 @@
 
 <!-- Powered by https://github.com/abordage/wakatime-box . -->
 <!-- waka-box end -->
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-grid-snake.svg" />
-  <img src="./assets/github-contribution-grid-snake.svg" alt="GitHub contribution grid animation" width="100%" />
-</picture>
