@@ -23,10 +23,9 @@
 ## Activity
 
 <p align="center">
-  <img src="./profile/stats.svg" alt="GitHub statistics" />
+  <img src="./profile/stats.svg" width="100%" alt="GitHub statistics" />
   <br />
-  <img src="./profile/top-langs.svg" width="49%" alt="Most used languages" />
-  <img src="./assets/1.gif" width="49%" alt="Animated coding illustration" />
+  <img src="./profile/top-langs.svg" width="100%" alt="Most used languages" />
 </p>
 
 <!-- waka-box start -->
