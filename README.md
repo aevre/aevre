@@ -25,17 +25,15 @@
 
 <!-- waka-box start -->
 
-#### <a href="https://gist.github.com/ddee6660ea4819d749c4393b4cc8e382" target="_blank">📊 Weekly development breakdown</a>
+<a href="https://gist.github.com/ddee6660ea4819d749c4393b4cc8e382">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/wakatime-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile/wakatime.svg" />
+    <img src="./profile/wakatime.svg" width="100%" alt="Weekly development breakdown" />
+  </picture>
+</a>
 
-```text
-Lua                      🕓 12h56m ███▋░░░░░░░░░ 28.2%
-Go                       🕓 10h37m ███░░░░░░░░░░ 23.1%
-TypeScript               🕓 6h57m  █▉░░░░░░░░░░░ 15.2%
-Vue                      🕓 4h33m  █▎░░░░░░░░░░░  9.9%
-Markdown                 🕓 3h6m   ▉░░░░░░░░░░░░  6.8%
-```
-
-<!-- Powered by https://github.com/YouEclipse/waka-box-go . -->
+<!-- Powered by https://github.com/abordage/wakatime-box . -->
 <!-- waka-box end -->
 
 <picture>
