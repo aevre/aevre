@@ -1,47 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="300" viewBox="0 0 680 300" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="467" height="134" viewBox="0 0 467 134" role="img" aria-labelledby="title desc">
   <title id="title">Weekly development breakdown</title>
   <desc id="desc">WakaTime language usage for the past week</desc>
   <style>
-    text { font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2328; }
-    .title { font-size: 18px; font-weight: 600; }
+    text { font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #417e87; }
+    .title { font-size: 17px; font-weight: 600; fill: #006aff; }
     .label { font-weight: 600; }
-    .muted, .percent { fill: #656d76; }
-    .track { fill: #d8dee4; }
+    .muted, .percent { fill: #417e87; }
+    .track { fill: #e7edf0; }
   </style>
-  <text class="title" x="24" y="34">Weekly development breakdown</text>
+  <rect width="466" height="133" x="0.5" y="0.5" rx="4.5" fill="transparent" />
+  <text class="title" x="24" y="23">Weekly development breakdown</text>
   <g>
-    <text class="label" x="24" y="78">Vue</text>
-    <text class="muted" x="165" y="78">7h7m</text>
-    <rect class="track" x="250" y="65" width="300" height="10" rx="5" />
-    <rect x="250" y="65" width="96.0" height="10" rx="5" fill="#41b883" />
-    <text class="percent" x="652" y="78" text-anchor="end">32.0%</text>
+    <text class="label" x="24" y="46">Vue</text>
+    <text class="muted" x="118" y="46">7h7m</text>
+    <rect class="track" x="184" y="37" width="200" height="7" rx="3.5" />
+    <rect x="184" y="37" width="64.0" height="7" rx="3.5" fill="#41b883" />
+    <text class="percent" x="443" y="46" text-anchor="end">32.0%</text>
   </g>
   <g>
-    <text class="label" x="24" y="124">Go</text>
-    <text class="muted" x="165" y="124">4h3m</text>
-    <rect class="track" x="250" y="111" width="300" height="10" rx="5" />
-    <rect x="250" y="111" width="54.9" height="10" rx="5" fill="#00add8" />
-    <text class="percent" x="652" y="124" text-anchor="end">18.3%</text>
+    <text class="label" x="24" y="65">Go</text>
+    <text class="muted" x="118" y="65">4h3m</text>
+    <rect class="track" x="184" y="56" width="200" height="7" rx="3.5" />
+    <rect x="184" y="56" width="36.6" height="7" rx="3.5" fill="#00add8" />
+    <text class="percent" x="443" y="65" text-anchor="end">18.3%</text>
   </g>
   <g>
-    <text class="label" x="24" y="170">Lua</text>
-    <text class="muted" x="165" y="170">3h39m</text>
-    <rect class="track" x="250" y="157" width="300" height="10" rx="5" />
-    <rect x="250" y="157" width="49.2" height="10" rx="5" fill="#2c2d72" />
-    <text class="percent" x="652" y="170" text-anchor="end">16.4%</text>
+    <text class="label" x="24" y="84">Lua</text>
+    <text class="muted" x="118" y="84">3h39m</text>
+    <rect class="track" x="184" y="75" width="200" height="7" rx="3.5" />
+    <rect x="184" y="75" width="32.8" height="7" rx="3.5" fill="#2c2d72" />
+    <text class="percent" x="443" y="84" text-anchor="end">16.4%</text>
   </g>
   <g>
-    <text class="label" x="24" y="216">TypeScript</text>
-    <text class="muted" x="165" y="216">1h18m</text>
-    <rect class="track" x="250" y="203" width="300" height="10" rx="5" />
-    <rect x="250" y="203" width="17.7" height="10" rx="5" fill="#3178c6" />
-    <text class="percent" x="652" y="216" text-anchor="end">5.9%</text>
+    <text class="label" x="24" y="103">TypeScript</text>
+    <text class="muted" x="118" y="103">1h18m</text>
+    <rect class="track" x="184" y="94" width="200" height="7" rx="3.5" />
+    <rect x="184" y="94" width="11.8" height="7" rx="3.5" fill="#3178c6" />
+    <text class="percent" x="443" y="103" text-anchor="end">5.9%</text>
   </g>
   <g>
-    <text class="label" x="24" y="262">Other</text>
-    <text class="muted" x="165" y="262">6h5m</text>
-    <rect class="track" x="250" y="249" width="300" height="10" rx="5" />
-    <rect x="250" y="249" width="82.2" height="10" rx="5" fill="#8b949e" />
-    <text class="percent" x="652" y="262" text-anchor="end">27.4%</text>
+    <text class="label" x="24" y="122">Other</text>
+    <text class="muted" x="118" y="122">6h5m</text>
+    <rect class="track" x="184" y="113" width="200" height="7" rx="3.5" />
+    <rect x="184" y="113" width="54.8" height="7" rx="3.5" fill="#8b949e" />
+    <text class="percent" x="443" y="122" text-anchor="end">27.4%</text>
   </g>
 </svg>
