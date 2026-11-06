@@ -97,8 +97,8 @@ def render_svg(stats: list[tuple[str, str, float]], dark: bool = False) -> str:
   <title id="title">Weekly development breakdown</title>
   <desc id="desc">WakaTime language usage for the past week</desc>
   <style>
-    text {{ font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: {text_color}; }}
-    .title {{ font-size: 17px; font-weight: 600; fill: {title_color}; }}
+    text {{ font: 10px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: {text_color}; }}
+    .title {{ font-size: 15px; font-weight: 600; fill: {title_color}; }}
     .label {{ font-weight: 600; }}
     .muted, .percent {{ fill: {muted_color}; }}
     .track {{ fill: {track_color}; }}
