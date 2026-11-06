@@ -39,7 +39,7 @@ jobs:
 
       - name: Update README from Gist
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
         run: python3 scripts/update_waka_readme.py
 
