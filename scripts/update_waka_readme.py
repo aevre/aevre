@@ -70,14 +70,14 @@ def parse_stats(content: str) -> list[tuple[str, str, float]]:
 
 def render_svg(stats: list[tuple[str, str, float]], dark: bool = False) -> str:
     width = 467
-    height = 170
-    row_height = 23
+    height = 134
+    row_height = 19
     bar_x = 184
     bar_width = 200
     rows = []
 
     for index, (language, duration, percent) in enumerate(stats):
-        y = 55 + index * row_height
+        y = 46 + index * row_height
         fill_width = round(bar_width * max(0.0, min(100.0, percent)) / 100, 1)
         color = BAR_COLORS[index % len(BAR_COLORS)]
         rows.append(f'''  <g>
@@ -97,14 +97,14 @@ def render_svg(stats: list[tuple[str, str, float]], dark: bool = False) -> str:
   <title id="title">Weekly development breakdown</title>
   <desc id="desc">WakaTime language usage for the past week</desc>
   <style>
-    text {{ font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: {text_color}; }}
-    .title {{ font-size: 18px; font-weight: 600; fill: {title_color}; }}
+    text {{ font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: {text_color}; }}
+    .title {{ font-size: 17px; font-weight: 600; fill: {title_color}; }}
     .label {{ font-weight: 600; }}
     .muted, .percent {{ fill: {muted_color}; }}
     .track {{ fill: {track_color}; }}
   </style>
-  <rect width="466" height="169" x="0.5" y="0.5" rx="4.5" fill="transparent" />
-  <text class="title" x="24" y="27">Weekly development breakdown</text>
+  <rect width="466" height="133" x="0.5" y="0.5" rx="4.5" fill="transparent" />
+  <text class="title" x="24" y="23">Weekly development breakdown</text>
 {chr(10).join(rows)}
 </svg>
 '''
