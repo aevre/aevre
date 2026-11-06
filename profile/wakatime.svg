@@ -2,8 +2,8 @@
   <title id="title">Weekly development breakdown</title>
   <desc id="desc">WakaTime language usage for the past week</desc>
   <style>
-    text { font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #417e87; }
-    .title { font-size: 17px; font-weight: 600; fill: #006aff; }
+    text { font: 10px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #417e87; }
+    .title { font-size: 15px; font-weight: 600; fill: #006aff; }
     .label { font-weight: 600; }
     .muted, .percent { fill: #417e87; }
     .track { fill: #e7edf0; }
