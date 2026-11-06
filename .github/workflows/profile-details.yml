@@ -1,0 +1,33 @@
+name: Update profile details card
+
+on:
+  schedule:
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Generate profile details card
+        env:
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          curl --fail --silent --show-error --location \
+            --retry 3 \
+            --output profile/profile-details.svg \
+            "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=${OWNER}&theme=transparent"
+
+      - name: Commit card
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/profile-details.svg
+          git diff --cached --quiet || git commit -m "docs: update profile details card"
+          git push

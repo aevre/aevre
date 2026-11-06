@@ -23,6 +23,10 @@
 ## Activity
 
 <p align="center">
+  <img src="./profile/profile-details.svg" width="100%" alt="GitHub profile details" />
+</p>
+
+<p align="center">
   <img src="./profile/stats.svg" width="49%" height="165" alt="GitHub statistics" />
   <img src="./profile/top-langs.svg" width="49%" height="165" alt="Most used languages" />
 </p>
@@ -34,14 +38,7 @@
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./profile/wakatime-dark.svg" />
       <source media="(prefers-color-scheme: light)" srcset="./profile/wakatime.svg" />
-      <img src="./profile/wakatime.svg" width="49%" alt="Weekly development breakdown" />
-    </picture>
-  </a>
-  <a href="https://github.com/aevre">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=aevre&amp;hide_border=true&amp;border_radius=4.5&amp;card_width=467&amp;card_height=170&amp;disable_animations=true&amp;theme=github-dark-blue" />
-      <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=aevre&amp;hide_border=true&amp;border_radius=4.5&amp;card_width=467&amp;card_height=170&amp;disable_animations=true&amp;theme=default&amp;background=00000000&amp;stroke=e7edf0&amp;ring=006aff&amp;fire=006aff&amp;currStreakNum=417e87&amp;sideNums=417e87&amp;currStreakLabel=006aff&amp;sideLabels=417e87&amp;dates=417e87" />
-      <img src="https://streak-stats.demolab.com?user=aevre&amp;hide_border=true&amp;border_radius=4.5&amp;card_width=467&amp;card_height=170&amp;disable_animations=true" width="49%" alt="GitHub contribution streak" />
+      <img src="./profile/wakatime.svg" width="100%" alt="Weekly development breakdown" />
     </picture>
   </a>
 </p>

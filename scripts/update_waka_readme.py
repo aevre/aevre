@@ -110,12 +110,7 @@ def render_svg(stats: list[tuple[str, str, float]], dark: bool = False) -> str:
 '''
 
 
-def render_block(gist_id: str, username: str) -> str:
-    streak_base = "https://streak-stats.demolab.com"
-    streak_options = (
-        f"user={username}&amp;hide_border=true&amp;border_radius=4.5"
-        "&amp;card_width=467&amp;card_height=170&amp;disable_animations=true"
-    )
+def render_block(gist_id: str) -> str:
     return "\n".join([
         START_MARKER,
         "",
@@ -124,14 +119,7 @@ def render_block(gist_id: str, username: str) -> str:
         "    <picture>",
         '      <source media="(prefers-color-scheme: dark)" srcset="./profile/wakatime-dark.svg" />',
         '      <source media="(prefers-color-scheme: light)" srcset="./profile/wakatime.svg" />',
-        '      <img src="./profile/wakatime.svg" width="49%" alt="Weekly development breakdown" />',
-        "    </picture>",
-        "  </a>",
-        f'  <a href="https://github.com/{username}">',
-        "    <picture>",
-        f'      <source media="(prefers-color-scheme: dark)" srcset="{streak_base}?{streak_options}&amp;theme=github-dark-blue" />',
-        f'      <source media="(prefers-color-scheme: light)" srcset="{streak_base}?{streak_options}&amp;theme=default&amp;background=00000000&amp;stroke=e7edf0&amp;ring=006aff&amp;fire=006aff&amp;currStreakNum=417e87&amp;sideNums=417e87&amp;currStreakLabel=006aff&amp;sideLabels=417e87&amp;dates=417e87" />',
-        f'      <img src="{streak_base}?{streak_options}" width="49%" alt="GitHub contribution streak" />',
+        '      <img src="./profile/wakatime.svg" width="100%" alt="Weekly development breakdown" />',
         "    </picture>",
         "  </a>",
         "</p>",
@@ -154,7 +142,6 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--gist-id", default=os.environ.get("GIST_ID"))
     parser.add_argument("--readme", type=Path, default=Path("README.md"))
-    parser.add_argument("--username", default=os.environ.get("GITHUB_REPOSITORY_OWNER", "aevre"))
     parser.add_argument("--svg",
                         type=Path,
                         default=Path("profile/wakatime.svg"))
@@ -171,7 +158,7 @@ def main() -> None:
     args.svg.parent.mkdir(parents=True, exist_ok=True)
     args.svg.write_text(render_svg(stats), encoding="utf-8")
     args.dark_svg.write_text(render_svg(stats, dark=True), encoding="utf-8")
-    block = render_block(args.gist_id, args.username)
+    block = render_block(args.gist_id)
     original = args.readme.read_text(encoding="utf-8")
     updated = update_readme(original, block)
     if updated != original:
