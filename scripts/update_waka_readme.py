@@ -69,56 +69,72 @@ def parse_stats(content: str) -> list[tuple[str, str, float]]:
 
 
 def render_svg(stats: list[tuple[str, str, float]], dark: bool = False) -> str:
-    width = 680
-    row_height = 46
-    height = 70 + row_height * len(stats)
-    bar_x = 250
-    bar_width = 300
+    width = 467
+    height = 170
+    row_height = 23
+    bar_x = 184
+    bar_width = 200
     rows = []
 
     for index, (language, duration, percent) in enumerate(stats):
-        y = 78 + index * row_height
+        y = 55 + index * row_height
         fill_width = round(bar_width * max(0.0, min(100.0, percent)) / 100, 1)
         color = BAR_COLORS[index % len(BAR_COLORS)]
         rows.append(f'''  <g>
     <text class="label" x="24" y="{y}">{escape(language)}</text>
-    <text class="muted" x="165" y="{y}">{escape(duration)}</text>
-    <rect class="track" x="{bar_x}" y="{y - 13}" width="{bar_width}" height="10" rx="5" />
-    <rect x="{bar_x}" y="{y - 13}" width="{fill_width}" height="10" rx="5" fill="{color}" />
-    <text class="percent" x="652" y="{y}" text-anchor="end">{percent:.1f}%</text>
+    <text class="muted" x="118" y="{y}">{escape(duration)}</text>
+    <rect class="track" x="{bar_x}" y="{y - 9}" width="{bar_width}" height="7" rx="3.5" />
+    <rect x="{bar_x}" y="{y - 9}" width="{fill_width}" height="7" rx="3.5" fill="{color}" />
+    <text class="percent" x="443" y="{y}" text-anchor="end">{percent:.1f}%</text>
   </g>''')
 
-    text_color = "#f0f6fc" if dark else "#1f2328"
-    muted_color = "#8b949e" if dark else "#656d76"
-    track_color = "#30363d" if dark else "#d8dee4"
+    title_color = "#58a6ff" if dark else "#006aff"
+    text_color = "#c9d1d9" if dark else "#417e87"
+    muted_color = "#8b949e" if dark else "#417e87"
+    track_color = "#30363d" if dark else "#e7edf0"
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
   <title id="title">Weekly development breakdown</title>
   <desc id="desc">WakaTime language usage for the past week</desc>
   <style>
     text {{ font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: {text_color}; }}
-    .title {{ font-size: 18px; font-weight: 600; }}
+    .title {{ font-size: 18px; font-weight: 600; fill: {title_color}; }}
     .label {{ font-weight: 600; }}
     .muted, .percent {{ fill: {muted_color}; }}
     .track {{ fill: {track_color}; }}
   </style>
-  <text class="title" x="24" y="34">Weekly development breakdown</text>
+  <rect width="466" height="169" x="0.5" y="0.5" rx="4.5" fill="transparent" />
+  <text class="title" x="24" y="27">Weekly development breakdown</text>
 {chr(10).join(rows)}
 </svg>
 '''
 
 
-def render_block(gist_id: str) -> str:
+def render_block(gist_id: str, username: str) -> str:
+    streak_base = "https://streak-stats.demolab.com"
+    streak_options = (
+        f"user={username}&amp;hide_border=true&amp;border_radius=4.5"
+        "&amp;card_width=467&amp;card_height=170&amp;disable_animations=true"
+    )
     return "\n".join([
         START_MARKER,
         "",
-        f'<a href="https://gist.github.com/{gist_id}">',
-        "  <picture>",
-        '    <source media="(prefers-color-scheme: dark)" srcset="./profile/wakatime-dark.svg" />',
-        '    <source media="(prefers-color-scheme: light)" srcset="./profile/wakatime.svg" />',
-        '    <img src="./profile/wakatime.svg" width="100%" alt="Weekly development breakdown" />',
-        "  </picture>",
-        "</a>",
+        '<p align="center">',
+        f'  <a href="https://gist.github.com/{gist_id}">',
+        "    <picture>",
+        '      <source media="(prefers-color-scheme: dark)" srcset="./profile/wakatime-dark.svg" />',
+        '      <source media="(prefers-color-scheme: light)" srcset="./profile/wakatime.svg" />',
+        '      <img src="./profile/wakatime.svg" width="49%" alt="Weekly development breakdown" />',
+        "    </picture>",
+        "  </a>",
+        f'  <a href="https://github.com/{username}">',
+        "    <picture>",
+        f'      <source media="(prefers-color-scheme: dark)" srcset="{streak_base}?{streak_options}&amp;theme=github-dark-blue" />',
+        f'      <source media="(prefers-color-scheme: light)" srcset="{streak_base}?{streak_options}&amp;theme=default&amp;background=00000000&amp;stroke=e7edf0&amp;ring=006aff&amp;fire=006aff&amp;currStreakNum=417e87&amp;sideNums=417e87&amp;currStreakLabel=006aff&amp;sideLabels=417e87&amp;dates=417e87" />',
+        f'      <img src="{streak_base}?{streak_options}" width="49%" alt="GitHub contribution streak" />',
+        "    </picture>",
+        "  </a>",
+        "</p>",
         "",
         "<!-- Powered by https://github.com/abordage/wakatime-box . -->",
         END_MARKER,
@@ -138,6 +154,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--gist-id", default=os.environ.get("GIST_ID"))
     parser.add_argument("--readme", type=Path, default=Path("README.md"))
+    parser.add_argument("--username", default=os.environ.get("GITHUB_REPOSITORY_OWNER", "aevre"))
     parser.add_argument("--svg",
                         type=Path,
                         default=Path("profile/wakatime.svg"))
@@ -154,7 +171,7 @@ def main() -> None:
     args.svg.parent.mkdir(parents=True, exist_ok=True)
     args.svg.write_text(render_svg(stats), encoding="utf-8")
     args.dark_svg.write_text(render_svg(stats, dark=True), encoding="utf-8")
-    block = render_block(args.gist_id)
+    block = render_block(args.gist_id, args.username)
     original = args.readme.read_text(encoding="utf-8")
     updated = update_readme(original, block)
     if updated != original:
