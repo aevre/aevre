@@ -12,17 +12,17 @@
   <text class="title" x="24" y="23">Weekly development breakdown</text>
   <g>
     <text class="label" x="24" y="46">Lua</text>
-    <text class="muted" x="118" y="46">10h57m</text>
+    <text class="muted" x="118" y="46">10h33m</text>
     <rect class="track" x="184" y="37" width="200" height="7" rx="3.5" />
-    <rect x="184" y="37" width="127.2" height="7" rx="3.5" fill="#41b883" />
-    <text class="percent" x="443" y="46" text-anchor="end">63.6%</text>
+    <rect x="184" y="37" width="122.2" height="7" rx="3.5" fill="#41b883" />
+    <text class="percent" x="443" y="46" text-anchor="end">61.1%</text>
   </g>
   <g>
     <text class="label" x="24" y="65">Markdown</text>
-    <text class="muted" x="118" y="65">2h56m</text>
+    <text class="muted" x="118" y="65">3h13m</text>
     <rect class="track" x="184" y="56" width="200" height="7" rx="3.5" />
-    <rect x="184" y="56" width="34.2" height="7" rx="3.5" fill="#00add8" />
-    <text class="percent" x="443" y="65" text-anchor="end">17.1%</text>
+    <rect x="184" y="56" width="37.4" height="7" rx="3.5" fill="#00add8" />
+    <text class="percent" x="443" y="65" text-anchor="end">18.7%</text>
   </g>
   <g>
     <text class="label" x="24" y="84">Kotlin</text>
@@ -33,16 +33,16 @@
   </g>
   <g>
     <text class="label" x="24" y="103">YAML</text>
-    <text class="muted" x="118" y="103">28m39s</text>
+    <text class="muted" x="118" y="103">23m42s</text>
     <rect class="track" x="184" y="94" width="200" height="7" rx="3.5" />
-    <rect x="184" y="94" width="5.6" height="7" rx="3.5" fill="#3178c6" />
-    <text class="percent" x="443" y="103" text-anchor="end">2.8%</text>
+    <rect x="184" y="94" width="4.6" height="7" rx="3.5" fill="#3178c6" />
+    <text class="percent" x="443" y="103" text-anchor="end">2.3%</text>
   </g>
   <g>
     <text class="label" x="24" y="122">Other</text>
-    <text class="muted" x="118" y="122">2h13m</text>
+    <text class="muted" x="118" y="122">2h28m</text>
     <rect class="track" x="184" y="113" width="200" height="7" rx="3.5" />
-    <rect x="184" y="113" width="25.8" height="7" rx="3.5" fill="#8b949e" />
-    <text class="percent" x="443" y="122" text-anchor="end">12.9%</text>
+    <rect x="184" y="113" width="28.8" height="7" rx="3.5" fill="#8b949e" />
+    <text class="percent" x="443" y="122" text-anchor="end">14.4%</text>
   </g>
 </svg>
