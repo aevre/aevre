@@ -12,37 +12,37 @@
   <text class="title" x="24" y="23">Weekly development breakdown</text>
   <g>
     <text class="label" x="24" y="46">Lua</text>
-    <text class="muted" x="118" y="46">10h33m</text>
+    <text class="muted" x="118" y="46">11h53m</text>
     <rect class="track" x="184" y="37" width="200" height="7" rx="3.5" />
-    <rect x="184" y="37" width="107.2" height="7" rx="3.5" fill="#41b883" />
-    <text class="percent" x="443" y="46" text-anchor="end">53.6%</text>
+    <rect x="184" y="37" width="100.6" height="7" rx="3.5" fill="#41b883" />
+    <text class="percent" x="443" y="46" text-anchor="end">50.3%</text>
   </g>
   <g>
     <text class="label" x="24" y="65">Markdown</text>
-    <text class="muted" x="118" y="65">3h34m</text>
+    <text class="muted" x="118" y="65">3h38m</text>
     <rect class="track" x="184" y="56" width="200" height="7" rx="3.5" />
-    <rect x="184" y="56" width="36.2" height="7" rx="3.5" fill="#00add8" />
-    <text class="percent" x="443" y="65" text-anchor="end">18.1%</text>
+    <rect x="184" y="56" width="30.8" height="7" rx="3.5" fill="#00add8" />
+    <text class="percent" x="443" y="65" text-anchor="end">15.4%</text>
   </g>
   <g>
-    <text class="label" x="24" y="84">Less</text>
-    <text class="muted" x="118" y="84">43m49s</text>
+    <text class="label" x="24" y="84">Go</text>
+    <text class="muted" x="118" y="84">2h8m</text>
     <rect class="track" x="184" y="75" width="200" height="7" rx="3.5" />
-    <rect x="184" y="75" width="7.4" height="7" rx="3.5" fill="#2c2d72" />
-    <text class="percent" x="443" y="84" text-anchor="end">3.7%</text>
+    <rect x="184" y="75" width="18.2" height="7" rx="3.5" fill="#2c2d72" />
+    <text class="percent" x="443" y="84" text-anchor="end">9.1%</text>
   </g>
   <g>
-    <text class="label" x="24" y="103">Kotlin</text>
-    <text class="muted" x="118" y="103">36m56s</text>
+    <text class="label" x="24" y="103">Less</text>
+    <text class="muted" x="118" y="103">43m49s</text>
     <rect class="track" x="184" y="94" width="200" height="7" rx="3.5" />
     <rect x="184" y="94" width="6.2" height="7" rx="3.5" fill="#3178c6" />
     <text class="percent" x="443" y="103" text-anchor="end">3.1%</text>
   </g>
   <g>
     <text class="label" x="24" y="122">Other</text>
-    <text class="muted" x="118" y="122">4h13m</text>
+    <text class="muted" x="118" y="122">5h14m</text>
     <rect class="track" x="184" y="113" width="200" height="7" rx="3.5" />
-    <rect x="184" y="113" width="42.8" height="7" rx="3.5" fill="#8b949e" />
-    <text class="percent" x="443" y="122" text-anchor="end">21.4%</text>
+    <rect x="184" y="113" width="44.2" height="7" rx="3.5" fill="#8b949e" />
+    <text class="percent" x="443" y="122" text-anchor="end">22.1%</text>
   </g>
 </svg>
